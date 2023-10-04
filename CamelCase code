@@ -1,0 +1,7 @@
+int newwords = 0;
+        for (int i = 0; i < s.length(); i++) {
+            if (Character.charAt(i).isUpperCase()) {
+                newwords++;
+            }
+        }
+        return (newwords + 1);
