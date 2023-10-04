@@ -1,0 +1,30 @@
+public class Solution {
+
+
+    public static void insertionSort(int[] l) {
+        for (int i = 1; i < l.length; i++) {
+            int j = i - 1;
+            int yes = l[i];
+            while (j >= 0 && l[j] > yes) {
+                l[j + 1] = l[j];
+                j = j-1;
+            }
+            l[j + 1] = yes;
+        }
+    }
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int s = scanner.nextInt();
+        int[] ar = new int[s];
+        for (int i = 0; i < s; i++) {
+            ar[i] = scanner.nextInt();
+        }
+        insertionSort(ar);
+        for (int i = 0; i < s; i++) {
+            System.out.print(ar[i] + "");
+        }
+    }
+
+}
+
